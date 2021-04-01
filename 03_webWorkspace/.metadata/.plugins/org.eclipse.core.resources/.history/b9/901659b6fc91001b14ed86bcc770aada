@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3 align = center> <%= request.getParameter("id") %> login complete !!!</center></h3><br>
+<br>
+	<p><center><a href = ""> Register Book </a></center></p>
+	<p><center><a href = ""> Logout </a></center></p>
+	</body></html>
+
+</body>
+</html>

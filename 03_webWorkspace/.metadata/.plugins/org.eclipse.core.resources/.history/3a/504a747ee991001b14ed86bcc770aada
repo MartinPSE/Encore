@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+
+
+  <servlet>
+    <description></description>
+    <display-name>ServleConfigTest1</display-name>
+    <servlet-name>ServleConfigTest1</servlet-name>
+    <servlet-class>servlet.config.ServleConfigTest1</servlet-class>
+
+  
+  <init-param>
+  	<param-name>custname</param-name>
+  	<param-value>James </param-value>
+  </init-param>
+  
+  <init-param>
+  	<param-name>address</param-name>
+  	<param-value> NY </param-value>
+  </init-param>
+  
+    </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ServleConfigTest1</servlet-name>
+    <url-pattern>/SC1</url-pattern>
+  </servlet-mapping>
+</web-app>

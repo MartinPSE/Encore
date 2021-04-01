@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor='cyan'>
+<h3 align = "center"> JSP Result Page</h3>
+<b align = "center"> Count Value : </b>
+<%= request.getParameter("cnt") %>
+<!-- JSP 출력문에는 % 시작 끝에 ; 을 찍지 않는다. --> 
+
+</body>
+</html>

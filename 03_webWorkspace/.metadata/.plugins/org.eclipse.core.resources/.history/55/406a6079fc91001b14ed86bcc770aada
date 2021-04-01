@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3 align = center>"+id+" login complete !!!</center></h3><br>");
+	out.println("<br>");
+	out.println("<p><center><a href = www.naver.com>"+"Register Book"+"</a></center></p>");
+	out.println("<p><center><a href = www.naver.com>"+"Logout"+"</a></center></p>");
+	out.println("</body></html>");
+
+</body>
+</html>

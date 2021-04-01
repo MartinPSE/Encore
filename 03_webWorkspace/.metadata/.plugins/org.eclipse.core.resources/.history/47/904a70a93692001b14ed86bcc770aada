@@ -1,0 +1,122 @@
+package servlet.user;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+// 처음에 servlet 만들때 설정해주면 됩니다. name과 value를
+
+
+@WebServlet(
+		urlPatterns = { "/MainServlet" }, 
+		initParams = { 
+				@WebInitParam(name = "path", value = "C:\\encore_ohs\\eclipse\\webWorkspace\\Workshop03\\filestore\\userinfo\\member.txt") 
+		})
+		
+public class MainServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private String path;
+	private String[] temp;
+	private ArrayList<String[]> lists = new ArrayList<>();
+	
+	
+	
+	@Override
+	public void init() throws ServletException {
+		path = getInitParameter("path");
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(path));
+			
+			while(true) {
+				String str = br.readLine();
+				if (str == null) break;
+				temp = str.split(" "); // txt 에 있는 정보들 나눠서
+				lists.add(temp);  // arraylist에 넣어서 보관
+				System.out.println(temp[0]+" 회원님의 정보를 가져왔습니다. ");	
+				
+			}
+			br.close();
+			
+		}catch ( Exception e ) {
+			System.out.println(" <<<<<< ERROR >>>>>> ");
+		}
+		}
+	
+    public MainServlet() {
+        super();
+    }
+    
+    
+    
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+		
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+	}
+	
+	
+	
+	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 한글 변환 .
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
+		
+		PrintWriter out = response.getWriter();
+		
+		String name = request.getParameter("name");
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
+		// login의 실패 성공을 확인해야해.
+		boolean flag = false;
+		
+		out.println("<html><body>");
+		for (String[] m : lists) {
+			if(m[0].equals(id) && m[1].equals(password)) {
+				out.println("<marquee bgcolor=green>Hello</marquee>");
+				out.println("<p align = center><a href =loginSuccess.jsp?id="+id+"&password="+password+">login success click</a></p>");
+				out.println("</body></html>");
+				flag = true;
+				break;
+			}
+			
+			
+		}
+		if ( flag == false ) {
+			out.println("<html><body>");
+			out.println("<p><a href=error.jsp> login error </a></p>");
+			out.println("</body></html>");
+		}
+		
+		
+		
+		out.println("</body></html>");
+		out.close();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	}
+
+}

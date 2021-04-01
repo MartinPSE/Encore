@@ -1,0 +1,119 @@
+package servlet.print;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class PrintHeaderServlet
+ */
+@WebServlet("/PHP")
+public class PrintHeaderServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+  
+    public PrintHeaderServlet() {
+    	
+        super();
+        
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+		
+		PrintWriter out = response.getWriter();
+		
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
+		String name = request.getParameter("name");
+		String address = request.getParameter("address");
+		
+		
+		out.println("<html><body>");
+		out.println("<h2><Strong><center> ====== Header Information Printed ====== </center></Strong></h2>");
+		out.println("<hr>");
+		Enumeration<String> headerNames = request.getHeaderNames();
+		while (headerNames.hasMoreElements()) {
+			String headerName = headerNames.nextElement();
+			String headerValue = request.getHeader(headerName);
+			out.println(headerName + " : " + headerValue);
+			out.println("<br>");
+		}
+		out.println("<hr>");
+		out.println("<Strong>"+id+" "+name+" "+address+" "+password+"</Strong>");		
+		
+		out.println("<br><br></body></html>");
+		out.close();
+		
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+		
+		PrintWriter out = response.getWriter();
+		
+		
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
+		String name = request.getParameter("name");
+		String address = request.getParameter("address");
+		
+		out.println("<html><body>");
+		out.println("<h2><Strong><center> ====== Header Information Printed ====== </center></Strong></h2>");
+		out.println("<hr>");
+		Enumeration<String> headerNames = request.getHeaderNames();
+		while (headerNames.hasMoreElements()) {
+			String headerName = headerNames.nextElement();
+			String headerValue = request.getHeader(headerName);
+			out.println(headerName + " : " + headerValue);
+			out.println("<br>");
+		}
+		out.println("<hr>");
+		out.println("<Strong>"+name+" "+address+" "+id+" "+password+"</Strong>");		
+		
+		out.println("<br><br></body></html>");
+		out.close();
+		
+		
+		
+	}
+	
+
+	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		// 한글처리
+		request.setCharacterEncoding("UTF-8");// method = "get" 이 여서 지금 적용이 안된다. -> 서버에 처리를 해야한다.
+		response.setContentType("text/html;charset=utf-8");// 위치는 Printwriter 보다 먼저.
+		
+		PrintWriter out = response.getWriter();
+		
+		// 폼에 입력된 값 받아서 -> get 방식으로 넘어온 Data도 폼 Data와 동일한 방식으로 받는다.
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
+		String name = request.getParameter("name");
+		String address = request.getParameter("address");
+		
+		// header의 정보를 다 받아온다.
+		Enumeration<String> headerNames = request.getHeaderNames();
+		while (headerNames.hasMoreElements()) {
+			String headerName = headerNames.nextElement();
+			String headerValue = request.getHeader(headerName);
+			out.println(headerName + " : " + headerValue);
+			out.println("<br>");
+		}
+		out.println("<hr>");
+		
+		
+		
+		
+
+}
+}

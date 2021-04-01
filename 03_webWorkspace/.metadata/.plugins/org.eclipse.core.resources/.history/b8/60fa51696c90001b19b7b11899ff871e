@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.outer {
+  width: 800px;
+  height: 800px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+</style>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="outer">
+<ul>
+<form>
+
+<br>
+      ID <input type="text" name = "id" ><br>
+PASSWORD <input type = "text" name = "password"><br>
+---------------------------------------------------
+</form>
+</ul>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2 align = "center"> Http Header Information </h2>
+<form action = "PHP" method="post">
+ID <input type="text" name= "id"><br>
+PASS <input type="password" name ="password"><br><br>
+
+
+<input type="submit" value= "send">
+<hr>
+<!--  get방식으로 서블릿으로 연결할때 name, address값도 같이 전송되도록 -->
+<a href="PHP?name=HaBaRee&address=korea">서블릿으로 이동합니다.</a>
+
+</form>
+
+</body>
+</html>

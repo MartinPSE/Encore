@@ -1,0 +1,5 @@
+package servlet.web;
+
+public class MyWebServlet {
+
+}

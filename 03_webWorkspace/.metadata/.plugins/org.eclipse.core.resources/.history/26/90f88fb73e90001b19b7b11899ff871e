@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<form action ="servlet">
+
+
+Send Data :: <input type="text" name = "data"> 
+<input type = "submit" value = "SEND">
+</form>
+
+
+</body>
+</html>
+
+
+// Form에 입력된 모든값을 가지고 돌아온다.
+// 404 Error 는 FileNotFound에러와 동일.   
+

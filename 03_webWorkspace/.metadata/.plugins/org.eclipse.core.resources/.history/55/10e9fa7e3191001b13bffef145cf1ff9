@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2 align = "center"> Http Header Information </h2>
+<form action = "PHP" method ="POST">
+ID <input type="text" name= "id"><br>
+PASS <input type="password" name ="password">
+ADDRESS <input type="text" name ="address"><br>
+<input type="submit" value= "send">
+<hr>
+
+<a href="PHP?name='id'&address='address'">서블릿으로 이동합니다.</a>
+
+</form>
+
+</body>
+</html>

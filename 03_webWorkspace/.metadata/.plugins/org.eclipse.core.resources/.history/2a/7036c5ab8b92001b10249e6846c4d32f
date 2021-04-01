@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<marquee bgcolor="Orange"> <h1> Using ServletConfig... Getting VIP keys...  </h1></marquee>
+<form action="SC2" method="post">
+
+VIP cust name <input type="text" name="cust" placeholder="고객 실제 이름을 적어주세요.">
+<input type="submit" value="SEND">
+
+</form>
+</body>
+</html>

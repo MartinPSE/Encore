@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style>
+/* 특정 영역에 스타일 적용. 선택자를 지정한다. */
+
+
+
+</style>
+
+</head>
+<body>
+<img src="img/book.jpg">
+<form action="LoginServlet">
+	<h3> 로그인하여주세요 </h3>
+	ID <input type="text" name="id"><br>
+	PASSWORD <input type="password" name ="password"><br>
+	<input type="submit" value="LOGIN"> 
+	
+</body>
+</html>

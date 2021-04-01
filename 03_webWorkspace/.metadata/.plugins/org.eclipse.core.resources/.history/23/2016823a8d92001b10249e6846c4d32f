@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<marquee bgcolor="Orange"> <h1> Communication of the Servlets with it's container  </h1></marquee>
+<form action="Context" method="post">
+<div align = center>
+<p>UserID <input type="text" name="userId" required></p>
+<p>UserPASS <input type="password" name="userPass" required></p>
+<p>UserName <input type="text" name="userName" required></p>
+<input type="submit" value="SEND">
+</div>
+</form>
+</body>
+</html>

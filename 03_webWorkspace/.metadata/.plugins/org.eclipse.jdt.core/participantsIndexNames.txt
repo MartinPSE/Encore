@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\encore_ohs\eclipse\webWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3105593305.index
+\web10_ServletContext\src
+C:\encore_ohs\eclipse\webWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\65080510.index
+\web07_LifeCycle\src
+C:\encore_ohs\eclipse\webWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3656143532.index
+\Workshop03\src
+C:\encore_ohs\eclipse\webWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1497691277.index
+\Workshop03\src
+C:\encore_ohs\eclipse\webWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2222735556.index
+\web01_WAS\src

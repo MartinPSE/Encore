@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align = "center">
+<h2 align = "center"> Register Member Form..,</h2>
+<form action = "Register" method = "post">
+<p>이름 <input type="text" name="name"></p>
+<p>나이 <input type="text" name="age"></p>
+<p>주소 <input type="text" name="address"></p>
+
+<input type="submit" name="가입하기">
+</div>
+
+</body>
+</html>
