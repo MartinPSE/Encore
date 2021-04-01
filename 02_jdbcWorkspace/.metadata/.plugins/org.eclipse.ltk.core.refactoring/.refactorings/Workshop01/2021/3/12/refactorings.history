@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.encore.dao.EmployeeDAO&apos; to &apos;com.encore.dao&apos;&#x0D;&#x0A;- Original project: &apos;Workshop01&apos;&#x0D;&#x0A;- Original element: &apos;Workshop01/src/com.encore.dao.EmployeeDAO&apos;&#x0D;&#x0A;- Renamed element: &apos;Workshop01/src/com.encore.dao&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.encore.dao.EmployeeDAO&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.encore.dao.EmployeeDAO" name="com.encore.dao" qualified="false" references="true" stamp="1616050884771" textual="false" version="1.0"/>
+</session>

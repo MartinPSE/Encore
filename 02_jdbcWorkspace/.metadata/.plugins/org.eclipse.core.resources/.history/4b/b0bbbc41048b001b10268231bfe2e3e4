@@ -1,0 +1,11 @@
+package com.encore.dao;
+
+import com.encore.vo.User;
+
+public interface BrokerDAO {
+	
+	void registerMember(User user);
+	void deleteMember(User user);
+	void updateMember(User user);
+
+}
