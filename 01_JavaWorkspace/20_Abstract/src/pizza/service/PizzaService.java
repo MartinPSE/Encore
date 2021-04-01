@@ -1,0 +1,12 @@
+package pizza.service;
+
+import pizza.parent.Pizza;
+
+//Template 기능들만 모아놓은 Interface
+
+public interface PizzaService {
+	void allMakePizza(Pizza[ ] pizzas);
+	
+	
+
+}
